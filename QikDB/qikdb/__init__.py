@@ -1,4 +1,4 @@
-__version__ = '0.2.7'
+__version__ = '0.3.0'
 
 import json
 import os
@@ -22,6 +22,7 @@ class DB:
     else:
       self.name = kwargs['config']['name']
     self.__createFile__()
+    
   def __repr__(self):
     return "Database Object"
 
@@ -154,10 +155,12 @@ class DB:
     if path.exists(f'DB/{self.name}.json'):
       os.remove(f'DB/{self.name}.json')
 
-  def exists(key):
+  def exists(self, key):
     """
     Checks if a key exists in the database.
     """
+    currentDB = self.all()
+    arr = currentDB[self.name]
 
     for x in range(len(arr)):
       if arr[x]['key'] == key:
