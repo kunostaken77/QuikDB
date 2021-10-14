@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "qikdb"
-version = "0.3.0"
+version = "4.0.0"
 description = "Simple, and easy to use Python Database using JSON."
 authors = ["Andrew Bordis"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-termcolor = "^1.1.0"
+
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
